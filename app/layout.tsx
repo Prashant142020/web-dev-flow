@@ -5,6 +5,9 @@ import './globals.css';
 import React from 'react';
 import { ThemeProvider } from '@/context/theme-provider';
 
+import { Toaster } from '@/components/ui/toaster';
+import NavBar from '@/components/shared/navbar/NavBar';
+
 const inter = Inter({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -42,6 +45,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );
