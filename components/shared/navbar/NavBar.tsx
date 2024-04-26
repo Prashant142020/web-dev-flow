@@ -24,7 +24,7 @@ export default async function NavBar() {
         />
 
         <p className="h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden">
-          Dev <span className="text-primary-500">Overflow</span>
+          Dev <span className="text-primary-500">flow</span>
         </p>
       </Link>
 
