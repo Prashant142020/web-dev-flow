@@ -1,7 +1,9 @@
+import HomeFilter from '@/components/home/HomeFilter';
 import Filter from '@/components/shared/Filter';
-import NavBar from '@/components/shared/navbar/NavBar';
+
 import LocalSearchbar from '@/components/shared/search/LocalSearchbar';
 import { Button } from '@/components/ui/button';
+import { HomePageFilters } from '@/constants/filter';
 import Link from 'next/link';
 
 export default async function Home() {
@@ -20,12 +22,17 @@ export default async function Home() {
         <LocalSearchbar
           route="/ "
           iconPosition="left"
-          imgSrc="/images/icons/search.svg"
+          imgSrc="/assets/icons/search.svg"
           placeholder="Search for questions"
           otherClasses="flex-1"
         />
-       <Filter />
+        <Filter
+          filters={HomePageFilters}
+          otherClasses="min-h-[56px] sm:min-w-[170px]"
+          containerClasses="hidden max-md:flex"
+        />
       </div>
+      <HomeFilter />
     </main>
   );
 }
