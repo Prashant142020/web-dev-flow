@@ -1,8 +1,8 @@
 import NextAuth from 'next-auth';
 import github from 'next-auth/providers/github';
 import google from 'next-auth/providers/google';
-import { PrismaAdapter } from '@auth/prisma-adapter';
-import prisma from './lib/prisma';
+import {PrismaAdapter  } from '@auth/prisma-adapter';
+import db from './lib/db';
 import { Adapter } from 'next-auth/adapters';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -10,6 +10,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   theme: {
     logo: '/assets/images/logo.png',
   },
-  adapter: PrismaAdapter(prisma) as Adapter,
+  adapter: PrismaAdapter(db) as Adapter,
   providers: [google, github],
 });
