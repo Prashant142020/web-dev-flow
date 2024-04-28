@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
 import { signOut } from '@/auth';
+import SignOut from './sign-out';
 
 interface UserButtonProps {
   user: User;
@@ -57,16 +58,7 @@ export default function UserButton({ user }: UserButtonProps) {
         <DropdownMenuItem asChild>
           {/* TODO: Add a logout functionality */}
 
-          <form
-            action={async () => {
-              'use server';
-              await signOut();
-            }}
-          >
-            <button className="flex w-full items-center" type="submit">
-              <LogOut className="mr-2 h-4 w-4" /> Sign Out
-            </button>
-          </form>
+          <SignOut />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
