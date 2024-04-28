@@ -13,7 +13,7 @@ model User {
   email         String    @unique
   emailVerified DateTime?
   image         String?
-  role          String?   //  @default("user")
+  role          String? //  @default("user")
   accounts      Account[]
   sessions      Session[]
 
@@ -66,4 +66,4 @@ model VerificationToken {
   @@map("verification_tokens")
 }
 
-// Optional for WebAuthn support
+ 
