@@ -1,9 +1,3 @@
-```bash
-
-
-
-```
-
 ## Getting Started
 
 ```bash
@@ -22,9 +16,9 @@ git push -f origin dev
 
 ```bash
 
-pnpx db studio
+bunx db studio
 # or
-pnpx db db push
+bunx db db push
 
 
 ```
